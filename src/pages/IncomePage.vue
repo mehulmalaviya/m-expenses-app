@@ -82,8 +82,8 @@
         </div>
 
         <div v-else-if="filteredIncome.length === 0" class="empty-state">
-          <q-icon name="account_balance_wallet" size="4rem" color="grey-4" />
-          <h3>{{ $t('income.noIncome') }}</h3>
+          <q-icon name="account_balance_wallet" class="q-mr-md" size="4rem" color="grey-4" />
+          <h4 class="q-ma-md q-pb-md">{{ $t('income.noIncome') }}</h4>
           <q-btn :label="$t('income.addIncome')" color="primary" @click="showIncomeDialog = true" />
         </div>
 

@@ -82,8 +82,8 @@
         </div>
 
         <div v-else-if="filteredExpenses.length === 0" class="empty-state">
-          <q-icon name="receipt_long" size="4rem" color="grey-4" />
-          <h3>{{ $t('expenses.noExpenses') }}</h3>
+          <q-icon name="receipt_long" class="q-mr-md q-pr-sm" size="4rem" color="grey-4" />
+          <h4 class="q-ma-md q-pb-md">{{ $t('expenses.noExpenses') }}</h4>
           <q-btn
             :label="$t('expenses.addExpense')"
             color="primary"

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { Notify } from 'quasar';
+import { LocalStorage, Notify } from 'quasar';
 import { supabase } from 'src/boot/supabase';
 import type { User } from 'src/types';
 import { computed, ref } from 'vue';
@@ -19,7 +19,6 @@ export const useAuthStore = defineStore('auth', () => {
         email,
         password,
       });
-console.log("data",data);
 
       if (error) throw error;
 
@@ -36,10 +35,14 @@ console.log("data",data);
           .eq('id', data.user.id)
           .single()
 
-          console.log("userData",userData);
-          role.value=userData?.role
 
-      return { success: true , role:userData?.role };
+           
+      if (userData?.role) {
+        LocalStorage.set('role', userData?.role);
+       }
+         role.value =  userData?.role
+          
+      return { success: true , role:LocalStorage.getItem('role') };
 
     } catch (error) {
       Notify.create({
@@ -59,6 +62,9 @@ console.log("data",data);
       if (error) throw error;
 
       user.value = null;
+
+      // localstorage data clear
+      localStorage.clear();
 
       Notify.create({
         type: 'positive',

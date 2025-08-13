@@ -8,6 +8,7 @@ import {
 import { useAuthStore } from 'src/stores/auth';
 
 import routes from './routes';
+import { LocalStorage } from 'quasar';
 
 export default route(function (/* { store, ssrContext } */) {
   const createHistory = process.env.SERVER
@@ -60,14 +61,13 @@ export default route(function (/* { store, ssrContext } */) {
     }
 
     // Restrict "/admin" route to only 'master' users
-    if (to.path === '/admin' && authStore.role !== 'master') {
+    if (to.path === '/admin' && LocalStorage.getItem('role') !== 'master') {
       console.log('Access denied: Only master can access /admin');
       next('/not-authorized'); // or redirect to dashboard or another route
       return;
     }
-    console.log("authStore", authStore.role);
+    console.log("authStore ===>", LocalStorage.getItem('role'));
 
-    // if(authStore?.role=='master')
 
     next();
   });

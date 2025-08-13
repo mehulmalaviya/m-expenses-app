@@ -267,7 +267,7 @@
           <q-tab-panels v-model="activeTab" animated>
             <q-tab-panel name="expenses">
               <div v-if="reportData.expenseBreakdown.length === 0" class="no-data">
-                <q-icon name="trending_down" size="3rem" color="grey-4" />
+                <q-icon name="trending_down" size="2rem" color="grey-4" />
                 <p>No expenses found for the selected date range</p>
               </div>
 
