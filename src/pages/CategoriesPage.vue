@@ -172,6 +172,7 @@
 
 <script setup lang="ts">
 import UiCard from 'src/components/ui/UiCard.vue';
+import CategoryForm from 'src/components/forms/CategoryForm.vue';
 import type { CategoryForm as CategoryFormType } from 'src/schemas';
 import { useCategoriesStore } from 'src/stores/categories';
 import { useExpensesStore } from 'src/stores/expenses';

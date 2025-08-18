@@ -76,6 +76,7 @@
 
 <script setup lang="ts">
 import { Dialog } from 'quasar';
+import NavigationItem from 'src/components/NavigationItem.vue';
 import { useSessionTimeout } from 'src/composables/useSessionTimeout';
 import { useAuthStore } from 'src/stores/auth';
 import { useLanguageStore } from 'src/stores/language';
