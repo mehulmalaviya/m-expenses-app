@@ -183,7 +183,6 @@
 
 <script setup lang="ts">
 import { format } from 'date-fns';
-import IncomeForm from 'src/components/forms/IncomeForm.vue';
 import UiCard from 'src/components/ui/UiCard.vue';
 import type { IncomeForm as IncomeFormType } from 'src/schemas';
 import { useCategoriesStore } from 'src/stores/categories';
@@ -348,7 +347,7 @@ watch([searchQuery, selectedCategory, fromDate, toDate], () => {
 }
 
 .page-container {
-  padding: 2rem;
+  padding: 1.2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -364,8 +363,8 @@ watch([searchQuery, selectedCategory, fromDate, toDate], () => {
 
     .page-title {
       font-size: 2.5rem;
-      font-weight: 700;
-      color: #1f2937;
+      font-weight: 500;
+      color: #383b3e;
       margin: 0;
     }
 

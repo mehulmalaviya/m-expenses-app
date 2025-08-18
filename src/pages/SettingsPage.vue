@@ -172,7 +172,7 @@
       </div>
 
       <!-- Save Button -->
-      <div class="save-section">
+      <!-- <div class="save-section">
         <q-btn
           :label="$t('common.save')"
           color="primary"
@@ -181,7 +181,7 @@
           :loading="saving"
           class="save-btn"
         />
-      </div>
+      </div> -->
     </div>
   </q-page>
 </template>
@@ -205,7 +205,7 @@ const expensesStore = useExpensesStore();
 const incomeStore = useIncomeStore();
 const categoriesStore = useCategoriesStore();
 
-const saving = ref(false);
+// const saving = ref(false);
 const selectedLanguage = ref(locale.value);
 // const selectedTheme = ref('light');
 // const selectedCurrency = ref('INR');
@@ -243,31 +243,32 @@ const buildInfo = computed(() => {
 function updateLanguage(newLanguage: string) {
   locale.value = newLanguage;
   selectedLanguage.value = newLanguage;
+  location.reload()
 }
 
-async function saveSettings() {
-  saving.value = true;
+// async function saveSettings() {
+//   saving.value = true;
 
-  try {
-    // Here you would save settings to Supabase user_preferences table
-    // For now, we'll just show a success message
+//   try {
+//     // Here you would save settings to Supabase user_preferences table
+//     // For now, we'll just show a success message
 
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
+//     await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
 
-    Notify.create({
-      type: 'positive',
-      message: 'Settings saved successfully',
-    });
-  } catch (error) {
-    Notify.create({
-      type: 'negative',
-      message: 'Failed to save settings',
-    });
-    console.log(error);
-  } finally {
-    saving.value = false;
-  }
-}
+//     Notify.create({
+//       type: 'positive',
+//       message: 'Settings saved successfully',
+//     });
+//   } catch (error) {
+//     Notify.create({
+//       type: 'negative',
+//       message: 'Failed to save settings',
+//     });
+//     console.log(error);
+//   } finally {
+//     saving.value = false;
+//   }
+// }
 
 // async function handleLogout() {
 //   await authStore.logout();
@@ -342,8 +343,7 @@ onMounted(async () => {
 }
 
 .page-container {
-  padding: 2rem;
-  max-width: 1000px;
+  padding: 1.2rem;
   margin: 0 auto;
 }
 
@@ -352,8 +352,8 @@ onMounted(async () => {
 
   .page-title {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #1f2937;
+    font-weight: 500;
+    color: #383b3e;
     margin: 0;
   }
 }

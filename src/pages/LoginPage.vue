@@ -138,7 +138,8 @@ function fillDemoCredentials() {
 
 .login-page {
   padding: 2rem;
-  background: radial-gradient(circle at top left, #827f7f 0%, #148796 100%);
+  // background: radial-gradient(circle at top left, #827f7f 0%, #148796 100%);
+  background-color: rgb(147, 170, 182);
 }
 
 .login-card {

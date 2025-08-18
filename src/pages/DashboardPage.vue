@@ -364,7 +364,7 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .dashboard-page {
-  padding: 2rem;
+  padding: 1.2rem;
   background: #f8fafc;
   min-height: 100vh;
 }
@@ -379,8 +379,8 @@ onMounted(async () => {
 
   .page-title {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #1f2937;
+    font-weight: 500;
+    color: #3a3d41;
     margin: 0 0 0.5rem 0;
   }
 

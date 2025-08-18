@@ -171,7 +171,6 @@
 </template>
 
 <script setup lang="ts">
-import CategoryForm from 'src/components/forms/CategoryForm.vue';
 import UiCard from 'src/components/ui/UiCard.vue';
 import type { CategoryForm as CategoryFormType } from 'src/schemas';
 import { useCategoriesStore } from 'src/stores/categories';
@@ -368,7 +367,7 @@ onMounted(async () => {
 }
 
 .page-container {
-  padding: 2rem;
+  padding: 1.2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -524,8 +523,8 @@ onMounted(async () => {
 
 .main-title {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #1f2937;
+  font-weight: 500;
+  color: #383b3e;
   margin: 0;
 }
 </style>
