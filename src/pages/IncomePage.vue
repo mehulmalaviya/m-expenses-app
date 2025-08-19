@@ -183,6 +183,7 @@
 
 <script setup lang="ts">
 import { format } from 'date-fns';
+import IncomeForm from 'src/components/forms/IncomeForm.vue';
 import UiCard from 'src/components/ui/UiCard.vue';
 import type { IncomeForm as IncomeFormType } from 'src/schemas';
 import { useCategoriesStore } from 'src/stores/categories';

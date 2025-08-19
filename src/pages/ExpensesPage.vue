@@ -183,6 +183,7 @@
 </template>
 
 <script setup lang="ts">
+import ExpenseForm from 'src/components/forms/ExpenseForm.vue';
 import UiCard from 'src/components/ui/UiCard.vue';
 import type { ExpenseForm as ExpenseFormType } from 'src/schemas';
 import { useCategoriesStore } from 'src/stores/categories';
